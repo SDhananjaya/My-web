@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>my Web Page</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #333;
+      padding: 10px;
+      text-align: center;
+      color: white;
+    }
+
+    nav {
+      background-color: #555;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+      margin: 0 10px;
+      font-size: 18px;
+    }
+
+    section {
+      padding: 20px;
+    }
+
+    button {
+      padding: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1> My web </h1>
+  </header>
+
+  <nav>
+    <a href="#" onclick="changeContent('Home')">Home</a>
+    <a href="#" onclick="changeContent('About')">About</a>
+    <a href="#" onclick="changeContent('Contact')">Contact</a>
+  </nav>
+
+  <section id="main-content">
+    <h2>Welcome to the My Web Page!</h2>
+    <p>This is the home page content. Feel free to explore the other sections using the navigation bar.</p>
+  </section>
+
+  <script>
+    function changeContent(page) {
+      var content = document.getElementById('main-content');
+      switch (page) {
+        case 'Home':
+          content.innerHTML = '<h2>Welcome to the Powerful Web Page!</h2><p>This is the home page content. Feel free to explore the other sections using the navigation bar.</p>';
+          break;
+        case 'About':
+          content.innerHTML = '<h2>About Us</h2><p>We are a team of web developers creating powerful and engaging web pages.</p>';
+          break;
+        case 'Contact':
+          content.innerHTML = '<h2>Contact Us</h2><p>Feel free to reach out to us at <a href="mailto:contact@example.com">dhananjaya5023@gmail.com</a>.</p>';
+          break;
+        default:
+          break;
+      }
+    }
+  </script>
+
+</body>
+</html>
